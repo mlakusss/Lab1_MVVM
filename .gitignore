@@ -1,0 +1,10 @@
+# Visual Studio / WPF временные и служебные файлы
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.csproj.user
+*.log
+*.tmp
+*.temp
