@@ -11,5 +11,8 @@
         <TabItem Header="Привязка по умолчанию">
             <views:DefaultBindingView/>
         </TabItem>
+        <TabItem Header="Двухсторонняя привязка">
+            <views:TwoWayBindingView/>
+        </TabItem>
     </TabControl>
 </Window>
