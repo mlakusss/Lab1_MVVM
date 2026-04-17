@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:views="clr-namespace:Lab1_MVVM.Views"
         xmlns:vm="clr-namespace:Lab1_MVVM.ViewModels"
-        Title="ЛР1 - MVVM привязки" Height="500" Width="800">
+        Title="ЛР1 - MVVM привязки" Height="550" Width="850">
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
@@ -13,6 +13,15 @@
         </TabItem>
         <TabItem Header="Двухсторонняя привязка">
             <views:TwoWayBindingView/>
+        </TabItem>
+        <TabItem Header="Одноразовая привязка">
+            <views:OneTimeBindingView/>
+        </TabItem>
+        <TabItem Header="Односторонние привязки">
+            <views:OneWayBindingView/>
+        </TabItem>
+        <TabItem Header="Триггеры">
+            <views:TriggersView/>
         </TabItem>
     </TabControl>
 </Window>
