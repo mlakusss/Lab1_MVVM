@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Lab1_MVVM.Views.OneTimeBindingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vm="clr-namespace:Lab1_MVVM.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <vm:OneTimeBindingViewModel/>
+    </UserControl.DataContext>
+    <StackPanel Margin="20">
+        <TextBlock Text="Одноразовая привязка (OneTime)" FontWeight="Bold" FontSize="16"/>
+        <GroupBox Header="OneTime - значение устанавливается один раз при загрузке" Margin="0,10">
+            <StackPanel>
+                <TextBlock Text="Привязка OneTime (не изменится):" />
+                <TextBlock Text="{Binding InitialName, Mode=OneTime}" Background="LightSalmon" Margin="0,5" Padding="5"/>
+                <TextBlock Text="Обычная привязка (будет меняться):" />
+                <TextBlock Text="{Binding DynamicName}" Background="LightGreen" Margin="0,5" Padding="5"/>
+                <Button Content="Обновить DynamicName" Command="{Binding UpdateDynamicNameCommand}" Margin="0,10,0,0"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Пояснение" Margin="0,10">
+            <TextBlock TextWrapping="Wrap">
+                <Run FontWeight="Bold">Mode=OneTime</Run> – значение считывается из источника (ViewModel) один раз при создании привязки и больше не обновляется, даже если источник изменится.
+                <LineBreak/><LineBreak/>
+                Нажмите кнопку: свойство DynamicName изменится (и отобразится в обычной привязке), но свойство InitialName с OneTime останется прежним.
+            </TextBlock>
+        </GroupBox>
+    </StackPanel>
+</UserControl>
