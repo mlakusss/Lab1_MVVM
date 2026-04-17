@@ -1,11 +1,11 @@
 ﻿using Lab1_MVVM.Models;
+using System;
 
 namespace Lab1_MVVM.ViewModels
 {
     public class OneTimeBindingViewModel : BaseViewModel
     {
         private UserModel _user = new UserModel();
-
         private string _initialName = "Начальное имя (не изменится)";
         public string InitialName
         {

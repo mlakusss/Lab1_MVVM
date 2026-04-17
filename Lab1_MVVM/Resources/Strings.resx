@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Окно и вкладки -->
+  <data name="MainWindow_Title" xml:space="preserve">
+    <value>ЛР2 - Локализация (RESX)</value>
+  </data>
+  <data name="Tab1_Header" xml:space="preserve">
+    <value>Привязка по умолчанию</value>
+  </data>
+  <data name="Tab2_Header" xml:space="preserve">
+    <value>Двухсторонняя привязка</value>
+  </data>
+  <data name="Tab3_Header" xml:space="preserve">
+    <value>Одноразовая привязка</value>
+  </data>
+  <data name="Tab4_Header" xml:space="preserve">
+    <value>Односторонние привязки</value>
+  </data>
+  <data name="Tab5_Header" xml:space="preserve">
+    <value>Триггеры</value>
+  </data>
+
+  <!-- Общие для всех вкладок -->
+  <data name="Group_ViaVM" xml:space="preserve">
+    <value>Привязка через ViewModel</value>
+  </data>
+  <data name="Direct_Group" xml:space="preserve">
+    <value>Прямая привязка к элементам (без VM)</value>
+  </data>
+  <data name="Name_Label" xml:space="preserve">
+    <value>Имя:</value>
+  </data>
+  <data name="Status_Label" xml:space="preserve">
+    <value>Статус (обновляется через кнопку):</value>
+  </data>
+  <data name="Update_Button" xml:space="preserve">
+    <value>Обновить статус</value>
+  </data>
+  <data name="Enter_Text" xml:space="preserve">
+    <value>Введите текст:</value>
+  </data>
+  <data name="YouEntered" xml:space="preserve">
+    <value>Вы ввели:</value>
+  </data>
+  <data name="Message_Button" xml:space="preserve">
+    <value>Показать сообщение</value>
+  </data>
+  <data name="MessageBox_Text" xml:space="preserve">
+    <value>Привет, мир!</value>
+  </data>
+  <data name="OneWay_DefaultNote" xml:space="preserve">
+    <value>*Mode=OneWay (по умолчанию для TextBlock)</value>
+  </data>
+
+  <!-- Вкладка TwoWay -->
+  <data name="TwoWay_Description" xml:space="preserve">
+    <value>Изменение данных в ViewModel автоматически обновляет UI</value>
+  </data>
+  <data name="TwoWay_Name" xml:space="preserve">
+    <value>Имя (TwoWay):</value>
+  </data>
+  <data name="TwoWay_Age" xml:space="preserve">
+    <value>Возраст (TwoWay):</value>
+  </data>
+  <data name="TwoWay_Age_Label" xml:space="preserve">
+    <value>Возраст:</value>
+  </data>
+  <data name="TwoWay_CurrentValues" xml:space="preserve">
+    <value>Текущие значения из ViewModel:</value>
+  </data>
+  <data name="TwoWay_DirectGroup" xml:space="preserve">
+    <value>Прямая привязка к элементам (без ViewModel)</value>
+  </data>
+  <data name="TwoWay_EnterText" xml:space="preserve">
+    <value>Введите текст в TextBox (TwoWay по умолчанию):</value>
+  </data>
+  <data name="TwoWay_Content" xml:space="preserve">
+    <value>Содержимое TextBox (привязка OneWay):</value>
+  </data>
+  <data name="TwoWay_Note" xml:space="preserve">
+    <value>*При вводе в полях 'Имя' или 'Возраст' значения ниже обновляются мгновенно (TwoWay)</value>
+  </data>
+
+  <!-- Вкладка OneTime -->
+  <data name="OneTime_Header" xml:space="preserve">
+    <value>OneTime - значение устанавливается один раз при загрузке</value>
+  </data>
+  <data name="OneTime_OneTimeLabel" xml:space="preserve">
+    <value>Привязка OneTime (не изменится):</value>
+  </data>
+  <data name="OneTime_NormalLabel" xml:space="preserve">
+    <value>Обычная привязка (будет меняться):</value>
+  </data>
+  <data name="OneTime_Button" xml:space="preserve">
+    <value>Обновить DynamicName</value>
+  </data>
+  <data name="Explanation_Header" xml:space="preserve">
+    <value>Пояснение</value>
+  </data>
+  <data name="OneTime_Explanation" xml:space="preserve">
+    <value>Mode=OneTime – значение считывается из источника (ViewModel) один раз при создании привязки и больше не обновляется, даже если источник изменится.\n\nНажмите кнопку: свойство DynamicName изменится (и отобразится в обычной привязке), но свойство InitialName с OneTime останется прежним.</value>
+  </data>
+
+  <!-- Вкладка OneWay -->
+  <data name="OneWay_Description" xml:space="preserve">
+    <value>OneWay - данные идут только от источника к цели</value>
+  </data>
+  <data name="OneWay_TextBoxLabel" xml:space="preserve">
+    <value>TextBox с привязкой OneWay (изменения в TextBox НЕ влияют на VM):</value>
+  </data>
+  <data name="OneWay_VMValueLabel" xml:space="preserve">
+    <value>Значение в ViewModel (обновляется только из кода):</value>
+  </data>
+  <data name="OneWay_Button" xml:space="preserve">
+    <value>Обновить SourceData в ViewModel</value>
+  </data>
+  <data name="OneWay_Explanation" xml:space="preserve">
+    <value>Mode=OneWay – изменения в UI не отправляются обратно в ViewModel.\nПопробуйте изменить текст в жёлтом TextBox – ниже текст не изменится, так как привязка односторонняя.\nТолько нажатие кнопки (обновление свойства в коде) изменит отображение.</value>
+  </data>
+
+  <!-- Вкладка Triggers -->
+  <data name="Triggers_Title" xml:space="preserve">
+    <value>Триггеры в WPF</value>
+  </data>
+  <data name="Triggers_Property" xml:space="preserve">
+    <value>Property Trigger (реагирует на свойство UI)</value>
+  </data>
+  <data name="Triggers_Property_Hover" xml:space="preserve">
+    <value>Наведи мышку на блок:</value>
+  </data>
+  <data name="Triggers_Property_Text" xml:space="preserve">
+    <value>Наведи курсор сюда</value>
+  </data>
+  <data name="Triggers_Data" xml:space="preserve">
+    <value>Data Trigger (реагирует на данные ViewModel)</value>
+  </data>
+  <data name="Triggers_Data_Checkbox" xml:space="preserve">
+    <value>Включить выделение</value>
+  </data>
+  <data name="Triggers_Data_Text" xml:space="preserve">
+    <value>Элемент с DataTrigger</value>
+  </data>
+  <data name="Triggers_Event" xml:space="preserve">
+    <value>Event Trigger (анимация при событии)</value>
+  </data>
+  <data name="Triggers_Event_Label" xml:space="preserve">
+    <value>Появление с анимацией при загрузке:</value>
+  </data>
+  <data name="Triggers_Event_Text" xml:space="preserve">
+    <value>Я появился с анимацией!</value>
+  </data>
+  <data name="Triggers_Note" xml:space="preserve">
+    <value>*Property Trigger – изменяет стиль при наведении мыши; Data Trigger – реагирует на свойство ViewModel; Event Trigger – запускает анимацию при событии Loaded</value>
+  </data>
+</root>

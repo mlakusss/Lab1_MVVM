@@ -5,17 +5,11 @@ namespace Lab1_MVVM.Views
 {
     public partial class OneTimeBindingView : System.Windows.Controls.UserControl
     {
-        public OneTimeBindingView()
-        {
-            InitializeComponent();
-        }
+        public OneTimeBindingView() => InitializeComponent();
 
         private void UpdateDynamicName_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is OneTimeBindingViewModel vm)
-            {
-                vm.UpdateDynamicName();
-            }
+            (DataContext as OneTimeBindingViewModel)?.UpdateDynamicName();
         }
     }
 }

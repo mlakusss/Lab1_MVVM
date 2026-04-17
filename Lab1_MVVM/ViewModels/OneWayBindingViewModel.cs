@@ -1,4 +1,6 @@
-﻿namespace Lab1_MVVM.ViewModels
+﻿using System;
+
+namespace Lab1_MVVM.ViewModels
 {
     public class OneWayBindingViewModel : BaseViewModel
     {

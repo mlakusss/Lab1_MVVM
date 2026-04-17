@@ -1,11 +1,11 @@
 ﻿using Lab1_MVVM.Models;
+using System;
 
 namespace Lab1_MVVM.ViewModels
 {
     public class DefaultBindingViewModel : BaseViewModel
     {
         private UserModel _user = new UserModel();
-
         private string _userName;
         public string UserName
         {
@@ -31,6 +31,11 @@ namespace Lab1_MVVM.ViewModels
         public DefaultBindingViewModel()
         {
             UserName = _user.Name;
+        }
+
+        public void UpdateStatus()
+        {
+            Status = $"Имя изменено на '{UserName}' в {DateTime.Now:T}";
         }
     }
 }
