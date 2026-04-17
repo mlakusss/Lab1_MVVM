@@ -1,24 +1,17 @@
-﻿using System.Text;
+﻿using Lab1_MVVM.ViewModels;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Lab1_MVVM
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            // Назначаем DataContext для каждой вкладки
+            var defaultVm = new DefaultBindingViewModel();
+            var defaultView = (Views.DefaultBindingView)this.FindName("DefaultBindingView");
+            if (defaultView != null) defaultView.DataContext = defaultVm;
         }
     }
 }
