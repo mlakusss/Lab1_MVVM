@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using Lab1_MVVM.ViewModels;
+using LocalizationLib;
 
 namespace Lab1_MVVM.Views
 {
@@ -12,10 +13,13 @@ namespace Lab1_MVVM.Views
 
         private void UpdateStatus_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is DefaultBindingViewModel vm)
-            {
-                vm.Status = $"Имя изменено на '{vm.UserName}' в {DateTime.Now:T}";
-            }
+            (DataContext as DefaultBindingViewModel)?.UpdateStatus();
+        }
+
+        private void ShowMessage_Click(object sender, RoutedEventArgs e)
+        {
+            var loc = (LocalizationLib.LocalizationService)Application.Current.Resources["LocalizationService"];
+            MessageBox.Show(loc["MessageBox_Text"]);
         }
     }
 }

@@ -1,5 +1,6 @@
-﻿using Lab1_MVVM.ViewModels;
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Controls;
+using LocalizationLib;
 
 namespace Lab1_MVVM
 {
@@ -8,10 +9,14 @@ namespace Lab1_MVVM
         public MainWindow()
         {
             InitializeComponent();
-            // Назначаем DataContext для каждой вкладки
-            var defaultVm = new DefaultBindingViewModel();
-            var defaultView = (Views.DefaultBindingView)this.FindName("DefaultBindingView");
-            if (defaultView != null) defaultView.DataContext = defaultVm;
+        }
+
+        private void LanguageComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is ComboBox cb && cb.SelectedItem is ComboBoxItem item && item.Tag is string cultureTag)
+            {
+                LocalizationService.Instance.ChangeLanguage(cultureTag);
+            }
         }
     }
 }

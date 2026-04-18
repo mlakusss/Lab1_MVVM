@@ -12,10 +12,7 @@ namespace Lab1_MVVM.Views
 
         private void UpdateSource_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is OneWayBindingViewModel vm)
-            {
-                vm.UpdateSource();
-            }
+            (DataContext as OneWayBindingViewModel)?.UpdateSource();
         }
     }
 }

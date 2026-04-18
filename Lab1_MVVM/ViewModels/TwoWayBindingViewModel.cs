@@ -5,7 +5,6 @@ namespace Lab1_MVVM.ViewModels
     public class TwoWayBindingViewModel : BaseViewModel
     {
         private UserModel _user = new UserModel();
-
         private string _userName;
         public string UserName
         {
@@ -34,13 +33,6 @@ namespace Lab1_MVVM.ViewModels
                     OnPropertyChanged();
                 }
             }
-        }
-
-        private string _feedback = "Измените имя или возраст";
-        public string Feedback
-        {
-            get => _feedback;
-            set => SetProperty(ref _feedback, value);
         }
 
         public TwoWayBindingViewModel()
