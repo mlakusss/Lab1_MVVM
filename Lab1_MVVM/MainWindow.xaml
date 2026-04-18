@@ -2,26 +2,29 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:views="clr-namespace:Lab1_MVVM.Views"
-        xmlns:vm="clr-namespace:Lab1_MVVM.ViewModels"
-        Title="ЛР1 - MVVM привязки" Height="550" Width="850">
-    <Window.DataContext>
-        <vm:MainWindowViewModel/>
-    </Window.DataContext>
-    <TabControl>
-        <TabItem Header="Привязка по умолчанию">
-            <views:DefaultBindingView/>
-        </TabItem>
-        <TabItem Header="Двухсторонняя привязка">
-            <views:TwoWayBindingView/>
-        </TabItem>
-        <TabItem Header="Одноразовая привязка">
-            <views:OneTimeBindingView/>
-        </TabItem>
-        <TabItem Header="Односторонние привязки">
-            <views:OneWayBindingView/>
-        </TabItem>
-        <TabItem Header="Триггеры">
-            <views:TriggersView/>
-        </TabItem>
-    </TabControl>
+        Title="{DynamicResource MainWindow_Title}"
+        Height="550" Width="850">
+    <DockPanel>
+        <ComboBox DockPanel.Dock="Top" Width="120" HorizontalAlignment="Right" Margin="10" SelectionChanged="LanguageComboBox_SelectionChanged">
+            <ComboBoxItem Tag="ru">Русский</ComboBoxItem>
+            <ComboBoxItem Tag="en">English</ComboBoxItem>
+        </ComboBox>
+        <TabControl>
+            <TabItem Header="{DynamicResource Tab1_Header}">
+                <views:DefaultBindingView/>
+            </TabItem>
+            <TabItem Header="{DynamicResource Tab2_Header}">
+                <views:TwoWayBindingView/>
+            </TabItem>
+            <TabItem Header="{DynamicResource Tab3_Header}">
+                <views:OneTimeBindingView/>
+            </TabItem>
+            <TabItem Header="{DynamicResource Tab4_Header}">
+                <views:OneWayBindingView/>
+            </TabItem>
+            <TabItem Header="{DynamicResource Tab5_Header}">
+                <views:TriggersView/>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>

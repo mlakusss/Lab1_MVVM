@@ -13,9 +13,13 @@ namespace Lab1_MVVM.Views
         private void UpdateStatus_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is DefaultBindingViewModel vm)
-            {
-                vm.Status = $"Имя изменено на '{vm.UserName}' в {DateTime.Now:T}";
-            }
+                vm.UpdateStatus();
+        }
+
+        private void ShowMessage_Click(object sender, RoutedEventArgs e)
+        {
+            string msg = (string)Application.Current.FindResource("MessageBox_Text");
+            MessageBox.Show(msg);
         }
     }
 }

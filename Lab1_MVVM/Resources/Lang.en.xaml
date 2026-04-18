@@ -1,0 +1,56 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="MainWindow_Title">LR2 - Localization (XAML Dict)</system:String>
+    <system:String x:Key="Tab1_Header">Default Binding</system:String>
+    <system:String x:Key="Tab2_Header">TwoWay Binding</system:String>
+    <system:String x:Key="Tab3_Header">OneTime Binding</system:String>
+    <system:String x:Key="Tab4_Header">OneWay Bindings</system:String>
+    <system:String x:Key="Tab5_Header">Triggers</system:String>
+
+    <system:String x:Key="Group_ViaVM">Binding via ViewModel</system:String>
+    <system:String x:Key="Direct_Group">Direct binding to UI (without VM)</system:String>
+    <system:String x:Key="Name_Label">Name:</system:String>
+    <system:String x:Key="Status_Label">Status (updated by button):</system:String>
+    <system:String x:Key="Update_Button">Update status</system:String>
+    <system:String x:Key="Enter_Text">Enter text:</system:String>
+    <system:String x:Key="YouEntered">You entered:</system:String>
+    <system:String x:Key="Message_Button">Show message</system:String>
+    <system:String x:Key="MessageBox_Text">Hello, world!</system:String>
+    <system:String x:Key="OneWay_DefaultNote">*Mode=OneWay (default for TextBlock)</system:String>
+
+    <system:String x:Key="TwoWay_Description">Changing data in ViewModel automatically updates UI</system:String>
+    <system:String x:Key="TwoWay_Name">Name (TwoWay):</system:String>
+    <system:String x:Key="TwoWay_Age">Age (TwoWay):</system:String>
+    <system:String x:Key="TwoWay_Age_Label">Age:</system:String>
+    <system:String x:Key="TwoWay_CurrentValues">Current values from ViewModel:</system:String>
+    <system:String x:Key="TwoWay_DirectGroup">Direct binding to UI (without ViewModel)</system:String>
+    <system:String x:Key="TwoWay_EnterText">Enter text into TextBox (TwoWay by default):</system:String>
+    <system:String x:Key="TwoWay_Content">TextBox content (OneWay binding):</system:String>
+    <system:String x:Key="TwoWay_Note">*When typing in 'Name' or 'Age' fields, the values below update instantly (TwoWay)</system:String>
+
+    <system:String x:Key="OneTime_Header">OneTime - value is set once at loading</system:String>
+    <system:String x:Key="OneTime_OneTimeLabel">OneTime binding (won't change):</system:String>
+    <system:String x:Key="OneTime_NormalLabel">Normal binding (will change):</system:String>
+    <system:String x:Key="OneTime_Button">Update DynamicName</system:String>
+    <system:String x:Key="Explanation_Header">Explanation</system:String>
+    <system:String x:Key="OneTime_Explanation">Mode=OneTime – the value is read from the source (ViewModel) once when the binding is created and never updated again, even if the source changes.\n\nClick the button: DynamicName property will change (and be displayed in the normal binding), but InitialName with OneTime will remain the same.</system:String>
+
+    <system:String x:Key="OneWay_Description">OneWay - data goes only from source to target</system:String>
+    <system:String x:Key="OneWay_TextBoxLabel">TextBox with OneWay binding (changes in TextBox DO NOT affect VM):</system:String>
+    <system:String x:Key="OneWay_VMValueLabel">Value in ViewModel (updated only from code):</system:String>
+    <system:String x:Key="OneWay_Button">Update SourceData in ViewModel</system:String>
+    <system:String x:Key="OneWay_Explanation">Mode=OneWay – changes in UI are not sent back to ViewModel.\nTry to change the text in the yellow TextBox – the text below will not change because the binding is one-way.\nOnly clicking the button (updating the property in code) will change the display.</system:String>
+
+    <system:String x:Key="Triggers_Title">Triggers in WPF</system:String>
+    <system:String x:Key="Triggers_Property">Property Trigger (reacts to UI property)</system:String>
+    <system:String x:Key="Triggers_Property_Hover">Hover mouse over the block:</system:String>
+    <system:String x:Key="Triggers_Property_Text">Hover here</system:String>
+    <system:String x:Key="Triggers_Data">Data Trigger (reacts to ViewModel data)</system:String>
+    <system:String x:Key="Triggers_Data_Checkbox">Enable highlight</system:String>
+    <system:String x:Key="Triggers_Data_Text">Element with DataTrigger</system:String>
+    <system:String x:Key="Triggers_Event">Event Trigger (animation on event)</system:String>
+    <system:String x:Key="Triggers_Event_Label">Appear with animation on load:</system:String>
+    <system:String x:Key="Triggers_Event_Text">I appeared with animation!</system:String>
+    <system:String x:Key="Triggers_Note">*Property Trigger – changes style on mouse hover; Data Trigger – reacts to ViewModel property; Event Trigger – starts animation on Loaded event</system:String>
+</ResourceDictionary>

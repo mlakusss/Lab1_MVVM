@@ -6,30 +6,24 @@
              xmlns:vm="clr-namespace:Lab1_MVVM.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-
     <UserControl.DataContext>
         <vm:OneTimeBindingViewModel/>
     </UserControl.DataContext>
-
     <StackPanel Margin="20">
         <TextBlock Text="Одноразовая привязка (OneTime)" FontWeight="Bold" FontSize="16"/>
 
-        <GroupBox Header="OneTime - значение устанавливается один раз при загрузке" Margin="0,10">
+        <GroupBox Header="{DynamicResource OneTime_Header}" Margin="0,10">
             <StackPanel>
-                <TextBlock Text="Привязка OneTime (не изменится):" />
+                <TextBlock Text="{DynamicResource OneTime_OneTimeLabel}" />
                 <TextBlock Text="{Binding InitialName, Mode=OneTime}" Background="LightSalmon" Margin="0,5" Padding="5"/>
-                <TextBlock Text="Обычная привязка (будет меняться):" />
+                <TextBlock Text="{DynamicResource OneTime_NormalLabel}" />
                 <TextBlock Text="{Binding DynamicName}" Background="LightGreen" Margin="0,5" Padding="5"/>
-                <Button Content="Обновить DynamicName" Click="UpdateDynamicName_Click" Margin="0,10,0,0"/>
+                <Button Content="{DynamicResource OneTime_Button}" Click="UpdateDynamicName_Click" Margin="0,10,0,0"/>
             </StackPanel>
         </GroupBox>
 
-        <GroupBox Header="Пояснение" Margin="0,10">
-            <TextBlock TextWrapping="Wrap">
-                <Run FontWeight="Bold">Mode=OneTime</Run> – значение считывается из источника (ViewModel) один раз при создании привязки и больше не обновляется, даже если источник изменится.
-                <LineBreak/><LineBreak/>
-                Нажмите кнопку: свойство DynamicName изменится (и отобразится в обычной привязке), но свойство InitialName с OneTime останется прежним.
-            </TextBlock>
+        <GroupBox Header="{DynamicResource Explanation_Header}" Margin="0,10">
+            <TextBlock TextWrapping="Wrap" Text="{DynamicResource OneTime_Explanation}"/>
         </GroupBox>
     </StackPanel>
 </UserControl>

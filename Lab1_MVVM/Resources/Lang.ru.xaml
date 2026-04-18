@@ -1,0 +1,63 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Заголовок окна и вкладки -->
+    <system:String x:Key="MainWindow_Title">ЛР2 - Локализация (XAML Dict)</system:String>
+    <system:String x:Key="Tab1_Header">Привязка по умолчанию</system:String>
+    <system:String x:Key="Tab2_Header">Двухсторонняя привязка</system:String>
+    <system:String x:Key="Tab3_Header">Одноразовая привязка</system:String>
+    <system:String x:Key="Tab4_Header">Односторонние привязки</system:String>
+    <system:String x:Key="Tab5_Header">Триггеры</system:String>
+
+    <!-- Общие элементы интерфейса -->
+    <system:String x:Key="Group_ViaVM">Привязка через ViewModel</system:String>
+    <system:String x:Key="Direct_Group">Прямая привязка к элементам (без VM)</system:String>
+    <system:String x:Key="Name_Label">Имя:</system:String>
+    <system:String x:Key="Status_Label">Статус (обновляется через кнопку):</system:String>
+    <system:String x:Key="Update_Button">Обновить статус</system:String>
+    <system:String x:Key="Enter_Text">Введите текст:</system:String>
+    <system:String x:Key="YouEntered">Вы ввели:</system:String>
+    <system:String x:Key="Message_Button">Показать сообщение</system:String>
+    <system:String x:Key="MessageBox_Text">Привет, мир!</system:String>
+    <system:String x:Key="OneWay_DefaultNote">*Mode=OneWay (по умолчанию для TextBlock)</system:String>
+
+    <!-- Вкладка TwoWay -->
+    <system:String x:Key="TwoWay_Description">Изменение данных в ViewModel автоматически обновляет UI</system:String>
+    <system:String x:Key="TwoWay_Name">Имя (TwoWay):</system:String>
+    <system:String x:Key="TwoWay_Age">Возраст (TwoWay):</system:String>
+    <system:String x:Key="TwoWay_Age_Label">Возраст:</system:String>
+    <system:String x:Key="TwoWay_CurrentValues">Текущие значения из ViewModel:</system:String>
+    <system:String x:Key="TwoWay_DirectGroup">Прямая привязка к элементам (без ViewModel)</system:String>
+    <system:String x:Key="TwoWay_EnterText">Введите текст в TextBox (TwoWay по умолчанию):</system:String>
+    <system:String x:Key="TwoWay_Content">Содержимое TextBox (привязка OneWay):</system:String>
+    <system:String x:Key="TwoWay_Note">*При вводе в полях 'Имя' или 'Возраст' значения ниже обновляются мгновенно (TwoWay)</system:String>
+
+    <!-- Вкладка OneTime -->
+    <system:String x:Key="OneTime_Header">OneTime - значение устанавливается один раз при загрузке</system:String>
+    <system:String x:Key="OneTime_OneTimeLabel">Привязка OneTime (не изменится):</system:String>
+    <system:String x:Key="OneTime_NormalLabel">Обычная привязка (будет меняться):</system:String>
+    <system:String x:Key="OneTime_Button">Обновить DynamicName</system:String>
+    <system:String x:Key="Explanation_Header">Пояснение</system:String>
+    <system:String x:Key="OneTime_Explanation">Mode=OneTime – значение считывается из источника (ViewModel) один раз при создании привязки и больше не обновляется, даже если источник изменится.\n\nНажмите кнопку: свойство DynamicName изменится (и отобразится в обычной привязке), но свойство InitialName с OneTime останется прежним.</system:String>
+
+    <!-- Вкладка OneWay -->
+    <system:String x:Key="OneWay_Description">OneWay - данные идут только от источника к цели</system:String>
+    <system:String x:Key="OneWay_TextBoxLabel">TextBox с привязкой OneWay (изменения в TextBox НЕ влияют на VM):</system:String>
+    <system:String x:Key="OneWay_VMValueLabel">Значение в ViewModel (обновляется только из кода):</system:String>
+    <system:String x:Key="OneWay_Button">Обновить SourceData в ViewModel</system:String>
+    <system:String x:Key="OneWay_Explanation">Mode=OneWay – изменения в UI не отправляются обратно в ViewModel.\nПопробуйте изменить текст в жёлтом TextBox – ниже текст не изменится, так как привязка односторонняя.\nТолько нажатие кнопки (обновление свойства в коде) изменит отображение.</system:String>
+
+    <!-- Вкладка Triggers -->
+    <system:String x:Key="Triggers_Title">Триггеры в WPF</system:String>
+    <system:String x:Key="Triggers_Property">Property Trigger (реагирует на свойство UI)</system:String>
+    <system:String x:Key="Triggers_Property_Hover">Наведи мышку на блок:</system:String>
+    <system:String x:Key="Triggers_Property_Text">Наведи курсор сюда</system:String>
+    <system:String x:Key="Triggers_Data">Data Trigger (реагирует на данные ViewModel)</system:String>
+    <system:String x:Key="Triggers_Data_Checkbox">Включить выделение</system:String>
+    <system:String x:Key="Triggers_Data_Text">Элемент с DataTrigger</system:String>
+    <system:String x:Key="Triggers_Event">Event Trigger (анимация при событии)</system:String>
+    <system:String x:Key="Triggers_Event_Label">Появление с анимацией при загрузке:</system:String>
+    <system:String x:Key="Triggers_Event_Text">Я появился с анимацией!</system:String>
+    <system:String x:Key="Triggers_Note">*Property Trigger – изменяет стиль при наведении мыши; Data Trigger – реагирует на свойство ViewModel; Event Trigger – запускает анимацию при событии Loaded</system:String>
+</ResourceDictionary>

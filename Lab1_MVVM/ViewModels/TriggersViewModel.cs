@@ -3,10 +3,6 @@
     public class TriggersViewModel : BaseViewModel
     {
         private bool _isHighlighted;
-        public bool IsHighlighted
-        {
-            get => _isHighlighted;
-            set => SetProperty(ref _isHighlighted, value);
-        }
+        public bool IsHighlighted { get => _isHighlighted; set => SetProperty(ref _isHighlighted, value); }
     }
 }
